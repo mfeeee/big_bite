@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #FFF9E6;
+}
+
+.app_bar {
+    height: 60px;
+    background-color: #FFA500;
+    padding: 10px;
+    box-shadow: 0px 0px 6px rgba(18, 18, 18, 0.6);
+    display: flex;
+    color: #f1f1f1;
+    font-size: 24px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.app_logo {
+    flex: 2;
+    text-align: center;
+}
+
+.app_logo img {
+    width: 50px;
+    height: 50px;
+}
+
+main {
+    padding: 20px;
+}
+
+main h1 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.itens_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.item_card {
+    width: 250px;
+    position: relative;
+    overflow: hidden;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 15px;
+    box-shadow: 0px 0px 2px rgba(18, 18, 18, 0.3);
+    margin: 5px;
+}
+
+.item_card .item_image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+}
+
+.item_card .card_content {
+    position: relative;
+    padding: 10px;
+}
+
+.item_card .card_content h2 {
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.item_card .card_content .item_price {
+    font-size: 22px;
+}
+
+.item_rating {
+    color: #FFDB58;
+    margin-bottom: 10px;
+}
+
+.item_card .item_options {
+    display: flex;
+}
+
+.item_card .item_options .option_detail {    
+    flex: 2;
+    text-decoration: none;
+    color: #333;
+    background-color: #f1f1f1;
+    text-align: center;
+    padding-top: 7px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.item_card .item_options .icon_option {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+    border-radius: 100%;
+    margin-left: 5px;
+}
