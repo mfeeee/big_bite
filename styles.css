@@ -11,6 +11,8 @@ body {
     background-color: #FFF9E6;
 }
 
+/* HOME PAGE */
+
 .app_bar {
     height: 60px;
     background-color: #FFA500;
@@ -82,7 +84,13 @@ main h1 {
     font-size: 22px;
 }
 
+.item_card .card_content .item_price .less_price {
+    font-size: 16px;
+}
+
 .item_rating {
+    display: flex;
+    align-items: center;
     color: #FFDB58;
     margin-bottom: 10px;
 }
@@ -91,22 +99,113 @@ main h1 {
     display: flex;
 }
 
-.item_card .item_options .option_detail {    
+.option_detail {    
     flex: 2;
     text-decoration: none;
     color: #333;
     background-color: #f1f1f1;
     text-align: center;
-    padding-top: 7px;
+    padding: 7px;
     border-radius: 15px;
     font-size: 14px;
     font-weight: bold;
 }
 
-.item_card .item_options .icon_option {
-    text-align: center;
+.icon_option {
+    /*text-align: center;*/
     background-color: rgba(255, 255, 255, 0.5);
-    padding: 5px;
+    padding: 7px;
     border-radius: 100%;
     margin-left: 5px;
+    display: flex;
+}
+
+/* DETAILS PAGE */
+
+.header_details {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 250px;
+}
+
+.header_details img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.header_details .option_details {
+    position: relative;
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+.header_details .option_details .icons_right {
+    display: flex;
+}
+
+.header_details .icon_option {
+    font-size: 18px;
+}
+
+.header_details .option_details a {
+    text-decoration: none;
+}
+
+.main_details {
+    width: 100%;
+    position: absolute;
+    border-radius: 14px;
+    background-color: #FFF9E6;
+    top: 240px;
+}
+
+.info_details .item_rating p {
+    color: #333;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.info_details .description_details {
+    font-size: 14px;
+    color: #222;
+    text-align: justify;
+}
+
+.info_details .gallery_details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.info_details .gallery_details .gallery_image {
+    flex: 1;
+    margin: 5px;
+}
+
+.info_details .gallery_details .gallery_image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: 0px 0px 5px rgba(18, 18, 18, 0.3);
+}
+
+.info_details .buy_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info_details .buy_item .price_item {
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+.info_details .buy_item .option_detail {
+    background-color: #FFA500;
+    color: #FFF9E6;
 }
