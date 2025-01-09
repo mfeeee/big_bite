@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Bite</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    
+    <header class="app_bar">
+        <a href="index.html">
+            <i class='bx bx-home'></i>
+        </a>
+        <div class="app_logo">        
+            <img src="assets/logo_w.png" alt="Big Bite Logomarca">
+        </div>
+        <i class='bx bx-cart'></i>
+    </header>
+
+    <main class="home_confirm">
+
+        <h1>Confirme seu pedido</h1>
+
+        <section class="order_itens">
+        
+            <div class="order_card">
+
+                <div class="card_image">
+                    <img id="item_image" src="assets/x-bacon.jpg" alt="X-Bacon">
+                </div>
+
+                <div class="card_details">
+                    <h2 id="item_name">Big-Bacon</h2>
+                    <h3 id="item_price">R$ 23.90</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                
+            </div>
+
+            <a href="#" class="button_confirm">
+                <i class='bx bxl-whatsapp'></i> Fazer Pedido
+            </a>
+
+        </section>
+
+    </main>
+
+    <script>
+
+        const urlParams = new URLSearchParams(window.location.search);
+
+        const itemName = urlParams.get('name');
+        const itemPrice = urlParams.get('price');
+        const itemImage = urlParams.get('image');
+
+        const elementPrice = document.querySelector('#item_price');
+        const elementName = document.querySelector('#item_name');
+        const elementImage = document.querySelector('#item_image');
+
+        /*if (itemName) {
+            console.log(`Item name: ${itemName}`);
+        } else {
+            console.log('Nenhum parâmetro encontrado na URL.');
+        }
+
+        const imageDetail = document.querySelector('.image_item');
+        const nameDetail = document.querySelector('.name_item');
+        const priceDetail = document.querySelector('.price_item');
+        */
+        elementName.textContent = itemName;
+        elementPrice.textContent = 'R$' + itemPrice;
+        elementImage.src = 'assets/' + itemImage; 
+
+    </script>
+
+</body>
+</html>

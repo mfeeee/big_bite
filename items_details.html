@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big Bite</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     
     <header class="header_details">
 
-        <img src="../assets/x-bacon.jpg" alt="Big-Bacon">
+        <img src="assets/x-bacon.jpg" alt="Big-Bacon" class="image_item">
 
         <div class="option_details">
 
-            <a href="../index.html">
+            <a href="index.html">
 
                 <div class="icon_option">
                     <i class='bx bx-chevron-left'></i>
@@ -41,7 +41,7 @@
 
     <main class="main_details">
 
-        <h1>Big-Bacon</h1>
+        <h1 class="name_item">Big-Bacon</h1>
 
         <section class="info_details">
 
@@ -62,19 +62,19 @@
             <div class="gallery_details">
 
                 <a class="gallery_image" href="#image01">
-                    <img src="../assets/x-burger.jpg" alt="Big-Burguer">
+                    <img src="assets/x-burger.jpg" alt="Big-Burguer">
                 </a>
 
                 <a href="#" class="lightbox" id="image01">\
-                    <span style="background-image: url(../assets/x-burger.jpg);"><p>Experimente também nosso Big-Burger</p></span>
+                    <span style="background-image: url(assets/x-burger.jpg);"><p>Experimente também nosso Big-Burger</p></span>
                 </a>
 
                 <a class="gallery_image" href="#image02">
-                    <img src="../assets/x-futuro.jpg" alt="Big-Futuro">
+                    <img src="assets/x-futuro.jpg" alt="Big-Futuro">
                 </a>
                 
                 <a href="#" class="lightbox" id="image02">\
-                    <span style="background-image: url(../assets/x-futuro.jpg);"><p>Experimente também nosso Big-Futuro</p></span>
+                    <span style="background-image: url(assets/x-futuro.jpg);"><p>Experimente também nosso Big-Futuro</p></span>
                 </a>
 
             </div>
@@ -83,13 +83,41 @@
                 
                 <p class="price_item">R$ 23.90</p>
 
-                <a href=".html" class="option_detail">Comprar Burger</a>
+                <a onclick="openOrderConfirm()" class="option_detail">Comprar Burger</a>
 
             </div>
 
         </section>
 
     </main>
+
+    <script>
+
+        const urlParams = new URLSearchParams(window.location.search);
+
+        const itemName = urlParams.get('name');
+        const itemPrice = urlParams.get('price');
+        const itemImage = urlParams.get('image');
+
+        if (itemName) {
+            console.log(`Item name: ${itemName}`);
+        } else {
+            console.log('Nenhum parâmetro encontrado na URL.');
+        }
+
+        const imageDetail = document.querySelector('.image_item');
+        const nameDetail = document.querySelector('.name_item');
+        const priceDetail = document.querySelector('.price_item');
+
+        nameDetail.textContent = itemName;
+        priceDetail.textContent = 'R$' + itemPrice;
+        imageDetail.src = 'assets/' + itemImage;
+
+        function openOrderConfirm() {
+            window.open('confirm_order.html?name=' + itemName + '&price=' + itemPrice + '&image=' + itemImage,'_self');
+        }
+
+    </script>
 
 </body>
 </html>
