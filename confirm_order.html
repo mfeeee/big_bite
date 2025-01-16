@@ -39,7 +39,7 @@
                 
             </div>
 
-            <a href="#" class="button_confirm">
+            <a href="#" class="button_confirm" onclick="openWhatsApp()">
                 <i class='bx bxl-whatsapp'></i> Fazer Pedido
             </a>
 
@@ -59,19 +59,13 @@
         const elementName = document.querySelector('#item_name');
         const elementImage = document.querySelector('#item_image');
 
-        /*if (itemName) {
-            console.log(`Item name: ${itemName}`);
-        } else {
-            console.log('Nenhum parâmetro encontrado na URL.');
-        }
-
-        const imageDetail = document.querySelector('.image_item');
-        const nameDetail = document.querySelector('.name_item');
-        const priceDetail = document.querySelector('.price_item');
-        */
         elementName.textContent = itemName;
         elementPrice.textContent = 'R$' + itemPrice;
         elementImage.src = 'assets/' + itemImage; 
+
+        function openWhatsApp() {
+            window.open('https://wa.me/5586988645647?text=Quero%20fazer%20um%20pedido%20do%20item%3A%20' + itemName);
+        }
 
     </script>
 
