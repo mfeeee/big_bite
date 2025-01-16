@@ -9,7 +9,7 @@ const assets = [
     "/confirm_order.html",
     "/style.css",
     "/app.js",
-    "/assets/logo_w.png",
+    "/assets/logo_b.png",
     "/assets/double-x.jpg",
     "/assets/o-burger-x.jpg",
     "/assets/x-bacon.jpg",
